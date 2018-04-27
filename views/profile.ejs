@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+  <% include partials/nav.ejs %>
+  <p> Profile Page </p>
+  <p> This is the profile of <%= person %></p>
+  <p> <strong>Age: </strong><%= data.age %></p>
+  <p> <strong>Job: </strong><%= data.job %></p>
+  <h2>Hobbies</h2>
+  <ul>
+    <% data.hobbies.forEach(function(item) { %>
+      <li><%= item %></li>
+    <% }); %>
+  </ul>
+</body>
+
+</html>
